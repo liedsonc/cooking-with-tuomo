@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link';
 import { getAllPosts } from "../lib/posts";
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
@@ -31,7 +32,11 @@ const BlogPostPreview = (props) => {
         width= {1200}
         height= {800} 
         />
-        <h2>{data.title}</h2>
+        <h2>
+          <Link href={`/blog/${data.slug}`}>
+            <a>{data.title}</a>
+          </Link>
+        </h2>
         <div>{data.publishDate}</div>
         <p>{data.excerpt}</p>
           <div style={{fontWeight: 'bold'}}>{data.author}</div>
