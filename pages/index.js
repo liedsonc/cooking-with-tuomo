@@ -24,7 +24,7 @@ export default function Home() {
 
 const BlogPostPreview = (props) => {
   const { data } = props;
-    return <div style={{ maxWidth: "400px" }}>
+    return <div style={{ maxWidth: "400px", marginBottom:"50px" }}>
         <Image 
         src={data.coverImage} 
         alt={data.title}
